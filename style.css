@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    /* No sé para qué es el box-sizing
+    No se me da la gana de usar google fonts
+    */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    /* 🤷
+        Cuando quito flex el contenido se pega al borde izquierdo
+    */
+    align-items: center;
+    height: 100%;
+    /* Creo que son propiedades de css flex
+       hv = 1% o sea 100 hv = 100%
+    */
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+}
+
+.panel {
+    background-size: cover;
+    /* Esto hace que la imagen de fondo ocupe todo el div */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80%;
+    flex: 0.5;
+    /* flex determina cuando de la pantalla cubre el elemento, de 0 a 1. pero no sé si tanto vertical como horizontalmente */
+    position: relative;
+    /* Ya ahorita añado transition y filter si alcanzo */
+    border-radius: 50px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.panel h2 {
+    font-size: 48px;
+    /* porque sí */
+    position: absolute;
+    left: 20px;
+    /* bottom: 20px; */
+    margin: 0;
+}
+
+/* Aquí van los background de cada div panel que antes estaban inline */
+#item1 { background-image: url('https://images.unsplash.com/photo-1494253188410-ff0cdea5499e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')}
+#item1 { background-image: url('https://images.unsplash.com/photo-1494253188410-ff0cdea5499e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')}
+#item2 { background-image: url('https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80%27')}
+#item3 { background-image: url('https://images.unsplash.com/photo-1478031706604-bb4b7b0b4e9e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80%27')}
+#item4 { background-image: url('https://images.unsplash.com/photo-1499988921418-b7df40ff03f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80%27')}
+#item5 { background-image: url('https://images.unsplash.com/photo-1499988921418-b7df40ff03f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80%27')}
+
+/* Cambios en CSS que solo aparecen al hacer click en el elemento */
+.panel.active {
+    flex: 5;
+}
+
+/* Ya no añadí nada más por ahora. Haría falta el caso responsive max-width: 480px */

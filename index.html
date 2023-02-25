@@ -5,8 +5,19 @@
         charset OK
         http equiv NOT NEEDED, OUT
         name, content OK
-        ▢ link rel icon
+        ▢ link rel favicon
         ▨ link rel stylesheet
+        CURRENT
+        ▢ The whole project is in a div container
+        ▢ Inside, each div has the image as a css background
+        ▢ (Turn into a React\Svelte app)
+        ▢ Inner div has id "panel" (id "active" is added with JS for the widened div)
+        ▢ "Panel" div has h3 title
+        ▢ Responsive
+        CHANGES
+        ▢ Add ID to inner divs (Move inline CSS into file)
+        ▢ Used H2 headings
+        ▢ Moved all styles to css file
      -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,33 +25,23 @@
     <title>Proyecto 1 de 50</title>
 </head>
 <body>
-    <!-- OK So
-    ▢ The whole project is in a div container
-    ▢ Inside, each div has the image as a css background
-    ▢ Add ID to inner divs (Move inline CSS into file)
-    ▢ (Turn into a React\Svelte app)
-    ▢ Inner div has class "panel" (Class "active" is added with JS for the widened div)
-    ▢ "Panel" div has h3 title
-    ▢ 
-    CSS
-    ▢ Responsive
-    -->
     <div class="container">
-        <div class="item1" id="panel">
+        <div id="item1" class="panel active" >
             <h2>Мост 🌉</h2>
         </div>
-        <div class="item2" id="panel">
+        <div id="item2" class="panel">
             <h2>Лесу 🌲</h2>
         </div>
-        <div class="item3" id="panel">
+        <div id="item3" class="panel">
             <h2>Море 🌊</h2>
         </div>
-        <div class="item4" id="panel">
-            <h2>Городе 🏙️</h2>
+        <div id="item4" class="panel">
+            <h2>Город 🏙️</h2>
         </div>
-        <div class="item5" id="panel">
-            <h2></h2>
+        <div id="item5" class="panel">
+            <h2>Гора 🏔️</h2>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
